@@ -5,7 +5,7 @@ import {
   useInfiniteQuery,
 } from '@tanstack/react-query';
 
-import { QUERY_KEYS } from '../../lib/react-query/queryKeys';
+import { QUERY_KEYS } from './queryKeys';
 import { INewPost, INewUser, IUpdatePost, IUpdateUser } from '../../types';
 
 import {

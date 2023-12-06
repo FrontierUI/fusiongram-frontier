@@ -20,11 +20,12 @@ import { SignupValidation } from '../../lib/validation';
 import {
   useCreateUserAccount,
   useSignInAccount,
-} from '../../lib/react-query/queries';
+} from '../../lib/react-query/queriesAndMutations';
 import { useUserContext } from '../../context/AuthContext';
 
 const SignupForm = () => {
   const { toast } = useToast();
+
   const navigate = useNavigate();
 
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -45,9 +46,9 @@ const SignupForm = () => {
   const { mutateAsync: signInAccount, isLoading: isSigningInUser } =
     useSignInAccount();
 
-  const handleSignup = async (values: z.infer<typeof SignupValidation>) => {
+  const handleSignup = async (user: z.infer<typeof SignupValidation>) => {
     try {
-      const newUser = await createUserAccount(values);
+      const newUser = await createUserAccount(user);
 
       if (!newUser) {
         toast({ title: 'Sign up failed. Please try again.' });
@@ -55,8 +56,8 @@ const SignupForm = () => {
       }
 
       const session = await signInAccount({
-        email: values.email,
-        password: values.password,
+        email: user.email,
+        password: user.password,
       });
 
       if (!session) {

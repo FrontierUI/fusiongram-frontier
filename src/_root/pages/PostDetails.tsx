@@ -9,7 +9,7 @@ import {
   useDeletePost,
   useGetPostById,
   useGetUserPosts,
-} from '../../lib/react-query/queries';
+} from '../../lib/react-query/queriesAndMutations';
 
 const PostDetails = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useUserContext, INITIAL_USER } from '../../context/AuthContext';
-import { useSignOutAccount } from '../../lib/react-query/queries';
+import { useSignOutAccount } from '../../lib/react-query/queriesAndMutations';
 import { Loader } from '../../components/shared';
 import { Button } from '../../components/ui/button';
 import { sidebarLinks } from '../../constants';

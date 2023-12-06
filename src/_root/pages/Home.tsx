@@ -1,7 +1,10 @@
 import { Models } from 'appwrite';
 
 import { Loader, PostCard, UserCard } from '../../components/shared';
-import { useGetRecentPosts, useGetUsers } from '../../lib/react-query/queries';
+import {
+  useGetRecentPosts,
+  useGetUsers,
+} from '../../lib/react-query/queriesAndMutations';
 
 const Home = () => {
   const {

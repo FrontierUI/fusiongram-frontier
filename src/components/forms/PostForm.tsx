@@ -5,7 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useUserContext } from '../../context/AuthContext';
-import { useCreatePost, useUpdatePost } from '../../lib/react-query/queries';
+import {
+  useCreatePost,
+  useUpdatePost,
+} from '../../lib/react-query/queriesAndMutations';
 import { PostValidation } from '../../lib/validation';
 
 import {

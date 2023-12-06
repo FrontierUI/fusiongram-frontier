@@ -5,7 +5,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { ProfileValidation } from '../../lib/validation';
 import { useUserContext } from '../../context/AuthContext';
-import { useGetUserById, useUpdateUser } from '../../lib/react-query/queries';
+import {
+  useGetUserById,
+  useUpdateUser,
+} from '../../lib/react-query/queriesAndMutations';
 
 import {
   Form,
